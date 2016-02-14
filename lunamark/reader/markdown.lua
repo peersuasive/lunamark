@@ -573,7 +573,7 @@ function M.new(writer, options)
   local DoubleQuoted = dquote * Ct((Inline - dquote)^1) * dquote
                      / writer.doublequoted
 
-  local squote_start = squote * -spacing
+  local squote_start = B(spacing,1) * squote * -spacing
 
   local squote_end = squote * B(nonspacechar, 2)
 
